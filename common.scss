@@ -70,63 +70,56 @@ img{
     border-radius: 10px;
     text-align: center;
     cursor: pointer;
-}
-
-.btn-wrapper-side{
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    align-items: flex-start;
-}
-
-.btn-signup, .btn-login{
-    width: 160px;
-    height: 60px;
-    line-height: 60px;
-    font-size: 20px;
-    @include mq(sm){
-        font-size: 18px;
+    &-signup, &-login{
+        width: 160px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 20px;
+        @include mq(sm){
+            font-size: 18px;
+        }
     }
-}
-.btn-signup{
-    background-color: #5FCE1A;
-    &:hover{
-        background-color: #34710E;
+    &-signup{
+        background-color: #5FCE1A;
+        &:hover{
+            background-color: #34710E;
+        }
     }
-}
-
-.btn-login{
-    background-color: #43AFE8;
-    &:hover{
-        background-color: #2F6784;
+    &-login{
+        background-color: #43AFE8;
+        &:hover{
+            background-color: #2F6784;
+        } 
     }
-}
-
-#header-right .btn-login{
-    margin-left: 60px;
-}
-.btn-gray{
-    width: fit-content;
-    min-width: 260px;
-    margin: 0 auto;
-    background-color: #6F6F6F;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    padding: 0 20px;
-    font-size: 20px;
-    @include mq(md){
-        font-size: 18px;
+    &-gray{
+        width: fit-content;
+        min-width: 260px;
+        margin: 0 auto;
+        background-color: #6F6F6F;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        padding: 0 20px;
+        font-size: 20px;
+        @include mq(md){
+            font-size: 18px;
+        }
+        @include mq(sm){
+            font-size: $font-size_xs;
+            padding: 0 10px;
+            min-width: 210px;
+        }
     }
-    @include mq(sm){
-        font-size: $font-size_xs;
-        padding: 0 10px;
-        min-width: 210px;
+    &-loggedin{
+        padding: 15px 20px;
+        font-size: 24px;
     }
-}
-.btn-loggedin{
-    padding: 15px 20px;
-    font-size: 24px;
+    &-wrapper-side{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+    }
 }
 
 /*form --------------------------------*/
@@ -265,6 +258,9 @@ header{
         @include mq(md){
             display: none;
         }
+    }
+    .btn-login{
+        margin-left: 60px;
     }
 }
 
