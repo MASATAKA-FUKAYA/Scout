@@ -12,10 +12,13 @@ $breakpoints: (
     }
 }
 
+//変数
+$font-color_white : whitesmoke;
+
 a{
     text-decoration: none;
     display: block;
-    color: white;
+    color: $font-color_white;
     width: 100%;
 }
 h1{
@@ -59,7 +62,7 @@ img{
 
 /*ボタン ---------------------------------*/
 .btn{
-    color: whitesmoke;
+    color: $font-color_white;
     border-radius: 10px;
     text-align: center;
     cursor: pointer;
@@ -220,7 +223,7 @@ header{
     width: 100%;
     max-width: 1920px;
     padding: 20px 30px;
-    color: white;
+    color: $font-color_white;
     background-color: black;
     .site-width{
         display: flex;
@@ -232,14 +235,112 @@ header{
     display: flex;
     align-items: center;
     h2{
-        margin-left: 70px;
+        margin-left: 20px;
         font-size: 48px;
+        @include mq(md){
+            margin-left: 10px;
+            font-size: 40px;
+        }
+    }
+    p{
+        @include mq(sm){
+            display: none;
+        }
     }
 }
 
 #header-right{
     display: flex;
     align-items: center;
+    .btn{
+        @include mq(md){
+            display: none;
+        }
+    }
+}
+
+/* ハンバーガーメニュー */
+.hamburger__button {
+    display: none;
+    @include mq(md){
+        display: inline-block;
+    }
+    position: relative;
+    width: 40px;
+    height: 30px;
+    z-index: 3;
+    cursor: pointer;
+    span{
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: white;
+        border-radius: 4px;
+        transition: 0.4s ease-in-out;
+        &:nth-child(1){
+            top: 0;
+        }
+        &:nth-child(2){
+            top: 14px;
+        }
+        &:nth-child(3){
+            bottom: 0;
+        }
+    }
+    &.active span{
+        border-radius: 4px;
+        &:nth-child(1){
+            transform:translateY(12px) rotate(-45deg);
+        }
+        &:nth-child(2){
+            opacity: 0;
+        }
+        &:nth-child(3){
+            transform: translateY(-15px) rotate(45deg);
+        }
+
+    }
+}
+
+.hamburger__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+    width: 30%;
+    height: 30%;
+    padding-top: 40px;
+    transition: all 0.4s;
+    background: black;
+    &.active{
+        transform: translateY(0%);
+    }
+    @include mq(sm){
+        width: 50%;
+    }
+    ul{
+        list-style: none;
+    }
+}
+.hamburger__item {
+    text-align: center;
+    a{
+        display: inline-block;
+        padding: 16px;
+        color: $font-color_white;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }
 
 
@@ -398,13 +499,6 @@ footer{
     text-align: center;
 }
 
-
-/* 外部パーツ　 ------------------------------*/
-/* 共通 ------------------------------*/
-*[class*="cp-"],
-*[class*="cp-"] * {
-    box-sizing: border-box;
-}
 /* ページトップ ------------------------------*/
 .p-scroll {
     text-align: center;

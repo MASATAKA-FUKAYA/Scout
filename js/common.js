@@ -33,6 +33,17 @@ $(function() {
       return false;
     });
 
+    // ハンバーガーメニュー
+    $('.js-hamburger__button').click(function() {
+      $(this).toggleClass('active');
+
+      if ($(this).hasClass('active')) {
+          $('.js-hamburger__content').addClass('active');
+      } else {
+          $('.js-hamburger__content').removeClass('active');
+      }
+    });
+
     //画像ライブプレビュー
     var $dropArea = $('.area-drop');
     var $fileInput = $('.input-file');
