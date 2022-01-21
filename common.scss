@@ -1,6 +1,5 @@
 /*全体 --------------------------------------*/
 $breakpoints: (
-    //iPhone SEが375px
     'sm': 'screen and (max-width: 414px)',
     'md': 'screen and (max-width: 820px)',
     'lg': 'screen and (max-width: 1000px)',
@@ -14,6 +13,11 @@ $breakpoints: (
 
 //変数
 $font-color_white : whitesmoke;
+
+$font-size_xxs : 12px;
+$font-size_xs : 15px;
+
+$border-glay : #707070;
 
 a{
     text-decoration: none;
@@ -103,7 +107,7 @@ img{
 }
 .btn-gray{
     width: fit-content;
-    min-width: 280px;
+    min-width: 260px;
     margin: 0 auto;
     background-color: #6F6F6F;
     height: 60px;
@@ -115,7 +119,7 @@ img{
         font-size: 18px;
     }
     @include mq(sm){
-        font-size: 14px;
+        font-size: $font-size_xs;
         padding: 0 10px;
         min-width: 210px;
     }
@@ -142,13 +146,15 @@ img{
     }
 }
 
-.area-msg, .form-info{
-    font-size: 15px;
-}
 .area-msg{
+    font-size: $font-size_xs;
     color: red;
 }
 .form-info{
+    font-size: $font-size_xs;
+    @include mq(sm){
+        font-size: $font-size_xxs;
+    }
     margin-left: 10px;
 }
 input[type="text"], input[type="password"], input[type="email"], input[type="number"], textarea{
@@ -157,6 +163,9 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
     width: 100%;
     padding: 8px 10px;
     font-size: 20px;
+    @include mq(sm){
+        font-size: $font-size_xs;
+    }
 }
 input[type="text"], input[type="password"], input[type="email"]{
     width: 100%;
@@ -336,14 +345,6 @@ header{
     }
 }
 
-@media screen and (max-width: 599px) {
-    .container {
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-}
-
-
 /*main -------------------------------------*/
 /*main-1culim*/
 #main-1culum{
@@ -351,11 +352,14 @@ header{
     min-width: 740px;
     margin: 75px auto 85px auto;
     padding: 30px;
-    border: 3px solid #707070;
-    /*p{
+    border: 3px solid $border-glay;
+    p{
         font-size: 20px;
         margin-bottom: 20px;
-    }*/
+        @include mq(sm){
+            font-size: $font-size_xs;
+        }
+    }
     @include mq(md){
         width: 90%;
         min-width: 390px;
@@ -493,7 +497,7 @@ footer{
     max-width: 1920px;
     padding: 10px 30px;
     background-color: black;
-    color: white;
+    color: $font-color_white;
 }
 .footer-left p{
     text-align: center;
