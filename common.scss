@@ -12,12 +12,13 @@ $breakpoints: (
 }
 
 //変数
+$background-color_gray : #F5F5F5;
 $font-color_white : whitesmoke;
 
 $font-size_xxs : 12px;
 $font-size_xs : 15px;
 
-$border-glay : #707070;
+$border-gray : #707070;
 
 a{
     text-decoration: none;
@@ -49,6 +50,12 @@ img{
     font-size: 36px;
     text-align: center;
     margin-bottom: 40px;
+    br{
+        display: none;
+        @include mq(md){
+            display: block;
+        }
+    }
     @include mq(sm){
         font-size: 28px;
     }
@@ -110,7 +117,7 @@ img{
         @include mq(sm){
             font-size: $font-size_xs;
             padding: 0 10px;
-            min-width: 210px;
+            min-width: 160px;
         }
     }
     &-loggedin{
@@ -357,7 +364,7 @@ header{
     min-width: 740px;
     margin: 75px auto 85px auto;
     padding: 30px;
-    border: 3px solid $border-glay;
+    border: 3px solid $border-gray;
     p{
         font-size: 20px;
         margin-bottom: 20px;
@@ -396,7 +403,7 @@ header{
     max-width: 800px;
     margin: 0 auto 40px auto;
     padding: 30px;
-    border: 3px solid $border-glay;
+    border: 3px solid $border-gray;
     @include mq(sm){
         border: none;
     }
@@ -410,9 +417,16 @@ header{
 }
 /*main-left-gray---*/
 .main-left-gray{
-    background-color: #F5F5F5;
+    background-color: $background-color_gray;
 }
-
+/*withdraw ---------------------------------*/
+.withdraw{
+    margin: 0 auto;
+    padding-top: 90px;
+    padding-bottom: 50px;
+    background-color: $background-color_gray;
+    text-align: center;
+}
 /*search-result----*/
 #search-result{
     width: 100%;
@@ -429,7 +443,7 @@ header{
 
 .result-container{
     display: flex;
-    background-color: #F5F5F5;
+    background-color: $background-color_gray;
     border: 1px solid #707070;
     padding: 20px;
 }
@@ -458,7 +472,7 @@ header{
 
 /*side-bar*/
 #side-bar{
-    background-color: #F5F5F5;
+    background-color: $background-color_gray;
     border: 3px solid #707070;
     width: 25%;
     max-width: 310px;
@@ -504,6 +518,7 @@ header{
     text-align: left;
     color: cornflowerblue;
 }
+
 
 /*footer -----------------------------------*/
 footer{

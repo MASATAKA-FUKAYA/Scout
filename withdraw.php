@@ -57,8 +57,8 @@ require('head.php');
 
         <div id="main-2culum" class="site-width">
             <div id="main-left">
-                <section class="widhtraw">
-                    <h2 class="section-title">退会しますがよろしいですか？</h2>
+                <section class="withdraw">
+                    <h2 class="section-title">退会しますが<br>よろしいですか？</h2>
                     <form action="" method="post">
                         <input type="submit" value="退会する" class="btn btn-gray">
                     </form>

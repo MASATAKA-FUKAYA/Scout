@@ -36,6 +36,16 @@ img {
   margin-bottom: 40px;
 }
 
+.section-title br {
+  display: none;
+}
+
+@media screen and (max-width: 820px) {
+  .section-title br {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 414px) {
   .section-title {
     font-size: 28px;
@@ -116,7 +126,7 @@ img {
   .btn-gray {
     font-size: 15px;
     padding: 0 10px;
-    min-width: 210px;
+    min-width: 160px;
   }
 }
 
@@ -521,6 +531,15 @@ header .site-width {
 /*main-left-gray---*/
 .main-left-gray {
   background-color: #F5F5F5;
+}
+
+/*withdraw ---------------------------------*/
+.withdraw {
+  margin: 0 auto;
+  padding-top: 90px;
+  padding-bottom: 50px;
+  background-color: #F5F5F5;
+  text-align: center;
 }
 
 /*search-result----*/
