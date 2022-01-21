@@ -121,7 +121,7 @@ require('head.php');
 
         <section id="main-1culum">
 
-            <h2 class="section-title">パスワード更新（認証キー確認）</h2>
+            <h2 class="section-title">パスワード更新<br>（認証キー確認）</h2>
             <p>受信されたメールに記載された、認証キーをご入力ください。</p>
 
             <form action="" method="post">
