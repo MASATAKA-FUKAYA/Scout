@@ -28,13 +28,22 @@
             </div>
             <div class="js-hamburger__content hamburger__content">
                 <nav>
-                    <ul>
+                    <ul class="hamburger__items">
                         <?php if(empty($_SESSION['user_id'])): ?>
-                            <li class="hamburger__item"><a href="signup.php">ユーザー登録</a></li>
-                            <li class="hamburger__item"><a href="login.php">ログイン</a></li>
+                            <li><a href="signup.php">ユーザー登録</a></li>
+                            <li><a href="login.php">ログイン</a></li>
                         <?php else: ?>
-                            <li class="hamburger__item"><a href="logout.php">ログアウト</a></li>
-                            <li class="hamburger__item"><a href="mypage.php">マイページ</a></li>
+                            <li><a href="logout.php">ログアウト</a></li>
+                            <li><a href="mypage.php">マイページ</a></li>
+                            <li><a href="profEdit.php">プロフィール編集</a></li>
+                            <li><a href="passEdit.php">パスワード変更</a></li>
+                            <li><a href="teamEdit.php">新規チーム作成</a></li>
+                            <li><a href="teamSearch.php">チーム検索</a></li>
+                            <li><a href="makeMemberRecruit.php">メンバー募集投稿</a></li>
+                            <li><a href="memberRecruit.php">メンバー募集を検索</a></li>
+                            <li><a href="makeOpponentRecruit.php">対戦相手募集投稿</a></li>
+                            <li><a href="opponentRecruit.php">対戦相手を検索</a></li>
+                            <li><a href="withdraw.php">退会する</a></li>
                         <?php endif; ?>
                     </ul>
                 </nav>

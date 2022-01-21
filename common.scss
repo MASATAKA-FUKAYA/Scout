@@ -49,6 +49,9 @@ img{
     font-size: 36px;
     text-align: center;
     margin-bottom: 40px;
+    @include mq(sm){
+        font-size: 28px;
+    }
 }
 
 /*スライドメッセージ------------------------*/
@@ -127,9 +130,7 @@ img{
 .form-part{
     margin: 0 auto 30px auto;
     width: 100%;
-    @include mq(sm){
-        width: 250px;
-    }
+    
     label{
         font-size: 24px;
         margin-bottom: 10px;
@@ -240,7 +241,6 @@ header{
         margin-left: 20px;
         font-size: 48px;
         @include mq(md){
-            margin-left: 10px;
             font-size: 40px;
         }
     }
@@ -315,14 +315,14 @@ header{
     z-index: 2;
     top: 0;
     right: 0;
-    transform: translateY(-100%);
-    width: 30%;
-    height: 30%;
+    transform: translateX(100%);
+    width: 40%;
+    height: 100%;
     padding-top: 40px;
     transition: all 0.4s;
     background: black;
     &.active{
-        transform: translateY(0%);
+        transform: translateX(0%);
     }
     @include mq(sm){
         width: 50%;
@@ -331,13 +331,22 @@ header{
         list-style: none;
     }
 }
-.hamburger__item {
+.hamburger__items li{
     text-align: center;
+    
+
     a{
         display: inline-block;
         padding: 16px;
         color: $font-color_white;
         text-decoration: none;
+        @include mq(sm){
+            font-size: $font-size_xs;
+            padding: 10px;
+        }
+    }
+    a:hover{
+        text-decoration: underline;
     }
 }
 
@@ -378,13 +387,19 @@ header{
 #main-left{
     width: 73%;
     margin-top: 50px;
+    @include mq(md){
+        width: 100%;
+    }
 }
 .main-left-white, .main-left-gray{
     width: 100%;
     max-width: 800px;
     margin: 0 auto 40px auto;
     padding: 30px;
-    border: 3px solid #707070;
+    border: 3px solid $border-glay;
+    @include mq(sm){
+        border: none;
+    }
 }
 
 .return-page{
@@ -449,7 +464,10 @@ header{
     max-width: 310px;
     margin: 50px 0;
     padding: 30px 20px;
-    font-size: 24px;
+    font-size: 20px;
+    @include mq(md){
+        display: none;
+    }
 }
 .sidebar-link:not(:last-child){
     margin-bottom: 10px;
