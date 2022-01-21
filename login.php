@@ -86,7 +86,7 @@ if(!empty($_POST)){
                     $err_msg['pass'] = MSG09;
                 }
             }catch(Exception $e){
-                error_log('エラー発生：' . $e->getMassage());
+                error_log('エラー発生：' . $e->getMessage());
                 $err_msg['common'] = MSG07;
             }
         }
