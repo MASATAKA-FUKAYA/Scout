@@ -48,7 +48,6 @@ if(!empty($_POST)){
 
 <?php
 $title = '退会';
-$originalCss = "css/withdraw.css";
 require('head.php');
 ?>
 
