@@ -551,18 +551,15 @@ footer{
     i{
         font-size: 28px;
     }
-}
-
-@media screen and (max-width: 599px) {
-    .p-scroll {
+    @include mq(md){
         right: 15px;
         bottom: 15px;
-    }
-    .p-scroll a {
-        padding: 6px;
-        font-size: 10px;
-    }
-    .p-scroll i {
-        font-size: 20px;
+        a{
+            padding: 6px;
+            font-size: 10px;
+        }
+        i{
+            font-size: 20px;
+        }
     }
 }
