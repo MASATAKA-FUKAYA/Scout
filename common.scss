@@ -185,40 +185,40 @@ select{
 select:hover, input[type="checkbox"]:hover{
     cursor: pointer;
 }
-form .area-drop{
-    display: block;
-    margin: 30px 10px 40px;
-    width: 370px;
-    height: 370px;
-    line-height: 370px;
-    border-radius: 50%;
-    background: #E3E3E3;
-    color: #ccc;
-    text-align: center;
-    position: relative;
-    box-sizing: border-box;
+form{
+    .area-drop{
+        display: block;
+        margin: 30px 10px 40px;
+        width: 370px;
+        height: 370px;
+        line-height: 370px;
+        border-radius: 50%;
+        background: #E3E3E3;
+        color: #ccc;
+        text-align: center;
+        position: relative;
+        box-sizing: border-box;
+    }
+    .input-file{
+        opacity:0;
+        width:100%;
+        height:370px;
+        border-radius: 50%;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index: 2; /* 必ずz-indexをつけないと登録画像を変更する際にドラッグ＆ドロップできなくなる*/
+    }
+    .prev-img{
+        width:100%;
+        height: 370px;
+        border-radius: 50%;
+        position:absolute;
+        top:0;
+        left:0;
+        object-fit: cover; 
+    }
 }
-form .input-file{
-    opacity:0;
-    width:100%;
-    height:370px;
-    border-radius: 50%;
-    position:absolute;
-    top:0;
-    left:0;
-    z-index: 2; /* 必ずz-indexをつけないと登録画像を変更する際にドラッグ＆ドロップできなくなる*/
-}
-form .prev-img{
-    width:100%;
-    height: 370px;
-    border-radius: 50%;
-    position:absolute;
-    top:0;
-    left:0;
-    object-fit: cover;
-}
-
-
 
 /*header -------------------------------------*/
 header{
