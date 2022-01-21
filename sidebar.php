@@ -15,10 +15,10 @@
         <a href="makeMemberRecruit.php">メンバー募集投稿</a>
     </p>
     <p class="sidebar-link">
-        <a href="makeOpponentRecruit.php">対戦相手募集投稿</a>
+        <a href="memberRecruit.php">メンバー募集を検索</a>
     </p>
     <p class="sidebar-link">
-        <a href="memberRecruit.php">メンバー募集を検索</a>
+        <a href="makeOpponentRecruit.php">対戦相手募集投稿</a>
     </p>
     <p class="sidebar-link">
         <a href="opponentRecruit.php">対戦相手を検索</a>
