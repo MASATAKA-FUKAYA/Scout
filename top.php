@@ -9,7 +9,7 @@ debugLogStart();
 ?>
 <?php
     $title = 'Top';
-    $originalCss = "css/top.css";
+    $originalCss = "scss/top.css";
     require('head.php');
 ?>
 
@@ -28,7 +28,7 @@ debugLogStart();
 
             <section id="top-view">
                 <h3>草野球を楽しむ、全ての人へ。</h3>
-                <h1 id="toppage-view-logo">Scout!</h1>
+                <h1>Scout!</h1>
                 <div class="btn-top-container">
                     <div id="btn-top" class="btn btn-signup">
                         <a href="signup.php">ユーザー登録</a>
@@ -74,7 +74,7 @@ debugLogStart();
             </section>
 
             <h3>さあ、はじめよう。</h3>
-            <h1 id="toppage-bottom-logo">Scout!</h1>
+            <h1>Scout!</h1>
             <div class="btn-top-container">
                 <div id="btn-top" class="btn btn-signup">
                     <a href="signup.php">ユーザー登録</a>
