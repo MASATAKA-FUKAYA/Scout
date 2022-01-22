@@ -84,7 +84,7 @@ debug('画面表示処理終了 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
 
 <?php
     $title = 'チーム詳細';
-    $originalCss = "css/teamDetail.css";
+    $originalCss = "scss/teamDetail.css";
     require('head.php');
 ?>
 
