@@ -1,0 +1,21 @@
+label{
+    display: block;
+}
+select{
+    display: inline-block;
+    margin-right: 10px;
+}
+.t-level-text{
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.result-wrapper{
+    width: 100%;
+    a{
+        color: black;
+        width: 50%;
+        display: flex;
+        align-items: center; 
+    }
+}

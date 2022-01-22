@@ -102,7 +102,7 @@ if(!empty($_POST)){
 ?>
 <?php
     $title = 'チーム検索';
-    $originalCss = 'css/teamSearch.css';
+    $originalCss = 'scss/teamSearch.css';
     require('head.php');
 ?>
     <body>
