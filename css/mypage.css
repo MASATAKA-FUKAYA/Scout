@@ -46,7 +46,7 @@
 
 /*table -------------------------------------------*/
 table{
-    font-size: 20px;
+    font-size: $font-size_s;
     margin-bottom: 40px;
 }
 table tr{
@@ -83,7 +83,7 @@ table tr{
     height: 60px;
     line-height: 60px;
     margin: 0 auto;
-    font-size: 20px;
+    font-size: $font-size_s;
 }
 
 

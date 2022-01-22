@@ -2,7 +2,7 @@
     margin-bottom: 40px;
 }
 .opponent-rec-date{
-    font-size: 20px;
+    font-size: $font-size_s;
 }
 
 .result-wrapper{

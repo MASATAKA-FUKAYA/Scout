@@ -93,7 +93,7 @@ img {
   width: 160px;
   height: 60px;
   line-height: 60px;
-  font-size: 20px;
+  font-size: $font-size_s;
 }
 
 @media screen and (max-width: 414px) {
@@ -129,7 +129,7 @@ img {
   line-height: 60px;
   text-align: center;
   padding: 0 20px;
-  font-size: 20px;
+  font-size: $font-size_s;
 }
 
 @media screen and (max-width: 820px) {
@@ -200,7 +200,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
   background-color: #E3E3E3;
   width: 100%;
   padding: 8px 10px;
-  font-size: 20px;
+  font-size: $font-size_s;
 }
 
 @media screen and (max-width: 414px) {
@@ -233,8 +233,14 @@ select {
   background-color: #E3E3E3;
   text-align: center;
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: $font-size_s;
   padding: 10px;
+}
+
+@media screen and (max-width: 414px) {
+  select {
+    width: 100%;
+  }
 }
 
 select:hover, input[type="checkbox"]:hover {
@@ -478,7 +484,7 @@ header .site-width {
 }
 
 #main-1culum p {
-  font-size: 20px;
+  font-size: $font-size_s;
   margin-bottom: 20px;
 }
 
@@ -509,6 +515,8 @@ header .site-width {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -568,8 +576,7 @@ header .site-width {
 /*search-result----*/
 #search-result {
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto 40px auto;
+  margin-bottom: 40px;
 }
 
 .result-title {
@@ -586,9 +593,9 @@ header .site-width {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #F5F5F5;
   border: 1px solid #707070;
 }
@@ -597,13 +604,24 @@ header .site-width {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 50%;
+  min-width: 320px;
   padding: 20px 10px;
+}
+
+.result-wrapper a {
+  color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 414px) {
+  .result-wrapper {
+    min-width: 280px;
+  }
 }
 
 .result-img {
@@ -616,12 +634,36 @@ header .site-width {
   border-radius: 50%;
 }
 
+@media screen and (max-width: 820px) {
+  .result-img {
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .result-img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 .result-text h4 {
-  font-size: 20px;
+  font-size: $font-size_s;
 }
 
 .result-text p {
-  font-size: 12px;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 414px) {
+  .result-text h4 {
+    font-size: 15px;
+  }
+  .result-text p {
+    font-size: 12px;
+  }
 }
 
 /*side-bar*/
@@ -633,7 +675,7 @@ header .site-width {
   width: 230px;
   margin: 50px 0;
   padding: 30px 20px;
-  font-size: 20px;
+  font-size: $font-size_s;
 }
 
 @media screen and (max-width: 820px) {
@@ -731,7 +773,7 @@ footer {
     font-size: 10px;
   }
   .p-scroll i {
-    font-size: 20px;
+    font-size: $font-size_s;
   }
 }
 /*# sourceMappingURL=common.css.map */
