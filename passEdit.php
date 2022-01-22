@@ -142,7 +142,7 @@ require('head.php');
                         </div>
                         <div class="form-part">
                             <label for="pass_new_re">
-                                新しいパスワード（再入力）
+                                新しいパスワード<br class="large-ignore">（再入力）
                             </label>
                             <div class="area-msg">
                                 <?php echo getErrMsg('pass_new_re'); ?>
