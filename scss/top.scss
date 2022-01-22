@@ -37,7 +37,7 @@ $border-gray : #707070;
     width: 210px;
     font-size: 28px;
     @include mq(sm){
-        font-size: 20px;
+        font-size: $font-size_s;
         margin: 0 auto;
     }
     &:last-child{
