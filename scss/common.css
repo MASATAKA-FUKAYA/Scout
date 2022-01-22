@@ -31,6 +31,16 @@ img {
      object-fit: cover;
 }
 
+.large-ignore {
+  display: none;
+}
+
+@media screen and (max-width: 414px) {
+  .large-ignore {
+    display: block;
+  }
+}
+
 .site-width {
   max-width: 1700px;
   margin: 0 auto;

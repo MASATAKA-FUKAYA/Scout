@@ -45,6 +45,12 @@ img{
     object-fit: cover;
 }
 
+.large-ignore{
+    display: none;
+    @include mq(sm){
+        display: block;
+    }
+}
 .site-width{
     max-width: 1700px;
     margin: 0 auto;
