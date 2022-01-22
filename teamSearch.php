@@ -107,11 +107,10 @@ if(!empty($_POST)){
 ?>
     <body>
 
-        <?php
-            require('header.php');
-        ?>
+        <?php require('header.php'); ?>
         <div id="main-2culum" class="site-width">
             <div id="main-left">
+
                 <section class="main-left-white">
 
                     <h2 class="section-title">チーム検索</h2>
@@ -208,41 +207,37 @@ if(!empty($_POST)){
                     </form>
                 </section>
 
-                <section id="search-result">
-                    <div class="result-title">
-                        <h3>チーム検索結果</h3>
-                    </div>
-                    <div class="result-container">
-                        <?php
-                            if ($result != null && is_array($result)) :
-                                foreach($result as $key => $val) :
-                        ?>
-                            <div class="result-wrapper">
-                                <a href="teamDetail.php?t_id=<?php echo $val['id']; ?>">
-                                    <div class="result-img"><img src="<?php echo $val['pic']; ?>" alt="<?php echo $val['team_name']; ?>"></div>
-                                    <div class="result-text">
-                                        <h4><?php echo $val['team_name']; ?></h4>
-                                        <p><?php echo $val['prefectures'].$val['city']; ?></p>
-                                        <p><?php echo getLevelName($val['level_id'])['name']; ?>中心</p>
-                                        <p><?php echo getCategoryName($val['category_id'])['name']; ?></p>
-                                    </div>
-                                </a>
-                            </div>
-                        <?php
-                                endforeach;
-                            endif;
-                        ?>
-                    </div>
-                    <!--  ページネーションをここに入れる　-->
-                </section>
-
             </div>
 
-            <?php
-                require('sidebar.php');
-            ?>
+            <?php require('sidebar.php');?>
+
+            <section id="search-result">
+                <div class="result-title">
+                    <h3>チーム検索結果</h3>
+                </div>
+                <div class="result-container">
+                    <?php
+                        if ($result != null && is_array($result)) :
+                            foreach($result as $key => $val) :
+                    ?>
+                    <div class="result-wrapper">
+                        <a href="teamDetail.php?t_id=<?php echo $val['id']; ?>">
+                            <div class="result-img"><img src="<?php echo $val['pic']; ?>" alt="<?php echo $val['team_name']; ?>"></div>
+                            <div class="result-text">
+                                <h4><?php echo $val['team_name']; ?></h4>
+                                <p><?php echo $val['prefectures'].$val['city']; ?></p>
+                                <p><?php echo getLevelName($val['level_id'])['name']; ?>中心</p>
+                                <p><?php echo getCategoryName($val['category_id'])['name']; ?></p>
+                            </div>
+                        </a>
+                    </div>
+                    <?php
+                            endforeach;
+                        endif;
+                    ?>
+                </div>
+                    <!--  ページネーションをここに入れる　-->
+            </section>
 
         </div>
-        <?php
-            require('footer.php');
-        ?>
+        <?php require('footer.php'); ?>
