@@ -194,6 +194,7 @@ select{
     display: block;
     width: fit-content;
     min-width: 180px;
+    max-width: 100%;
     background-color: #E3E3E3;
     text-align: center;
     margin-bottom: 10px;
@@ -204,6 +205,9 @@ select:hover, input[type="checkbox"]:hover{
     cursor: pointer;
 }
 form{
+    @include mq(sm){
+        text-align: center;
+    }
     .area-drop{
         display: block;
         margin: 30px 10px 40px;
