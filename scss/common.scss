@@ -18,7 +18,7 @@ $font-color_white : whitesmoke;
 
 $font-size_xxs : 12px;
 $font-size_xs : 15px;
-
+$font-size_s : 20px;
 $border-gray : #707070;
 
 a{
@@ -94,7 +94,7 @@ img{
         width: 160px;
         height: 60px;
         line-height: 60px;
-        font-size: 20px;
+        font-size: $font-size_s;
         @include mq(sm){
             font-size: 18px;
         }
@@ -120,7 +120,7 @@ img{
         line-height: 60px;
         text-align: center;
         padding: 0 20px;
-        font-size: 20px;
+        font-size: $font-size_s;
         @include mq(md){
             font-size: 18px;
         }
@@ -173,7 +173,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
     background-color: #E3E3E3;
     width: 100%;
     padding: 8px 10px;
-    font-size: 20px;
+    font-size: $font-size_s;
     @include mq(sm){
         font-size: $font-size_xs;
     }
@@ -198,8 +198,11 @@ select{
     background-color: #E3E3E3;
     text-align: center;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: $font-size_s;
     padding: 10px;
+    @include mq(sm){
+        width: 100%;
+    }
 }
 select:hover, input[type="checkbox"]:hover{
     cursor: pointer;
@@ -380,7 +383,7 @@ header{
     padding: 30px;
     border: 3px solid $border-gray;
     p{
-        font-size: 20px;
+        font-size: $font-size_s;
         margin-bottom: 20px;
         @include mq(sm){
             font-size: $font-size_xs;
@@ -401,6 +404,7 @@ header{
 /*main-2culum*/
 #main-2culum{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     padding: 0 20px;
@@ -444,8 +448,8 @@ header{
 /*search-result----*/
 #search-result{
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto 40px auto;
+    //max-width: 800px;
+    margin-bottom: 40px;
 }
 .result{
     &-title{
@@ -455,28 +459,46 @@ header{
     &-container{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
         background-color: $background-color_gray;
         border: 1px solid $border-gray;
     }
     &-wrapper{
         box-sizing: border-box;
         width: 50%;
+        min-width: 320px;
         padding: 20px 10px;
-        display: flex;
-        align-items: center;
+        a{
+            color: black;
+            display: flex;
+            align-items: center;
+        }
+        @include mq(sm){
+            min-width: 280px;
+        }
     }
     &-img{
         width: 90px;
         height: 90px;
         margin-right: 30px;
-        img{
-            border-radius: 50%;
+        img{ border-radius: 50%; }
+        @include mq(md){
+            width: 70px;
+            height: 70px;
+            margin-right: 15px;
+        }
+        @include mq(sm){
+            width: 50px;
+            height: 50px;
         }
     }
     &-text{
-        h4{ font-size: 20px; }
-        p{ font-size: $font-size_xxs; }
+        h4{ font-size: $font-size_s; }
+        p{ font-size: $font-size_xs; }
+        @include mq(sm){
+            h4{ font-size: $font-size_xs;}
+            p{ font-size: $font-size_xxs;}
+        }
     }
 }
 
@@ -488,7 +510,7 @@ header{
     width: 230px;
     margin: 50px 0;
     padding: 30px 20px;
-    font-size: 20px;
+    font-size: $font-size_s;
     @include mq(md){
         display: none;
     }
@@ -569,7 +591,7 @@ footer{
             font-size: 10px;
         }
         i{
-            font-size: 20px;
+            font-size: $font-size_s;
         }
     }
 }

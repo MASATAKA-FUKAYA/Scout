@@ -225,9 +225,11 @@ if(!empty($_POST)){
                             <div class="result-img"><img src="<?php echo $val['pic']; ?>" alt="<?php echo $val['team_name']; ?>"></div>
                             <div class="result-text">
                                 <h4><?php echo $val['team_name']; ?></h4>
-                                <p><?php echo $val['prefectures'].$val['city']; ?></p>
-                                <p><?php echo getLevelName($val['level_id'])['name']; ?>中心</p>
-                                <p><?php echo getCategoryName($val['category_id'])['name']; ?></p>
+                                <div class="result-text-detail">
+                                    <p><?php echo $val['prefectures'].$val['city']; ?></p>
+                                    <p><?php echo getLevelName($val['level_id'])['name']; ?>中心</p>
+                                    <p><?php echo getCategoryName($val['category_id'])['name']; ?></p>
+                                </div>
                             </div>
                         </a>
                     </div>

@@ -9,17 +9,17 @@ select {
 
 .t-level-text {
   display: block;
-  font-size: 20px;
+  font-size: $font-size_s;
   margin-bottom: 10px;
 }
 
-.result-wrapper a {
-  color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
+/*.result-wrapper{
+    //width: 100%;
+    a{
+        color: black;
+        //width: 50%;
+        display: flex;
+        align-items: center; 
+    }
+}*/
 /*# sourceMappingURL=teamSearch.css.map */
