@@ -27,7 +27,7 @@ debugLogStart();
             </div><!-- /Topに戻る -->
 
             <section id="top-view">
-                <h3>草野球を楽しむ、全ての人へ。</h3>
+                <h3>草野球を楽しむ、<br>全ての人へ。</h3>
                 <h1>Scout!</h1>
                 <div class="btn-top-container">
                     <div class="btn btn-signup btn-top">

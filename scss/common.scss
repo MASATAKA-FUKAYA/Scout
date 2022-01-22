@@ -31,6 +31,9 @@ h1{
     font-size: 100px;
     text-align: center;
     margin-bottom: 80px;
+    @include mq(md){
+        font-size: 80px;
+    }
 }
 h3{
     font-size: 30px;
