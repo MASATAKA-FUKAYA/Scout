@@ -49,19 +49,38 @@
 
 /*top-view*/
 #top-view {
-  color: white;
-  height: 500px;
+  color: whitesmoke;
   text-align: center;
-  padding-top: 50px;
+  padding: 50px 0;
   margin-bottom: 50px;
   background-image: url(../img/top-background.jpg);
   background-size: cover;
 }
 
+@media screen and (max-width: 414px) {
+  #top-view {
+    margin-bottom: 20px;
+  }
+}
+
 /*explanation*/
 #explanation {
+  padding: 0 20px;
   text-align: center;
   font-size: 24px;
+  /*@include mq(md){
+        text-align: left;
+    }*/
+}
+
+#explanation p {
+  padding: 10px 0;
+}
+
+@media screen and (max-width: 414px) {
+  #explanation p {
+    font-size: 15px;
+  }
 }
 
 /*point*/
@@ -82,6 +101,12 @@
   font-size: 16px;
   line-height: 1.5;
   color: #707070;
+}
+
+@media screen and (max-width: 414px) {
+  .cp-text {
+    text-align: left;
+  }
 }
 
 * + .cp-text {
@@ -112,7 +137,7 @@
   line-height: 1.5;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
-  color: #fff;
+  color: whitesmoke;
   background: #D67834;
   font-weight: bold;
   text-align: center;

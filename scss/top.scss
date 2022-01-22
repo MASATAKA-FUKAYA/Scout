@@ -11,6 +11,15 @@ $breakpoints: (
     }
 }
 
+//変数
+$background-color_gray : #F5F5F5;
+$font-color_white : whitesmoke;
+
+$font-size_xxs : 12px;
+$font-size_xs : 15px;
+
+$border-gray : #707070;
+
 /*btn-top*/
 .btn-top-container{
     display: flex;
@@ -42,20 +51,34 @@ $breakpoints: (
 #main{
     margin-bottom: 120px;
 }
+
 /*top-view*/
 #top-view{
-    color: white;
-    height: 500px;
+    color: $font-color_white;
+    //height: 500px;
     text-align: center;
-    padding-top: 50px;
+    padding: 50px 0;
     margin-bottom: 50px;
     background-image: url(../img/top-background.jpg);
     background-size: cover;
+    @include mq(sm){
+        margin-bottom: 20px;
+    }
 }
 /*explanation*/
 #explanation{
+    padding: 0 20px;
     text-align: center;
     font-size: 24px;
+    p{
+        padding: 10px 0;
+        @include mq(sm){
+            font-size: $font-size_xs;
+        }
+    }
+    /*@include mq(md){
+        text-align: left;
+    }*/
 }
 /*point*/
 #point{
@@ -64,7 +87,7 @@ $breakpoints: (
 }
 #point h2{
     background-color: #D67834;
-    color: whitesmoke;
+    color: $font-color_white;
 }
 /*アコーディオン -------------------------------*/
 /* テキスト */
@@ -73,6 +96,9 @@ $breakpoints: (
     font-size: 16px;
     line-height: 1.5;
     color: #707070;
+    @include mq(sm){
+        text-align: left;
+    }
 }
 * + .cp-text {
     margin: 16px 0 0 0;
@@ -100,7 +126,7 @@ $breakpoints: (
     font-size: 18px;
     line-height: 1.5;
     transition: .2s ease-in-out;
-    color: #fff;
+    color: $font-color_white;
     background: #D67834;
     font-weight: bold;
     text-align: center;

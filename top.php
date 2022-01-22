@@ -27,7 +27,7 @@ debugLogStart();
             </div><!-- /Topに戻る -->
 
             <section id="top-view">
-                <h3>草野球を楽しむ、<br>全ての人へ。</h3>
+                <h3>草野球を楽しむ、<br class="large-ignore">全ての人へ。</h3>
                 <h1>Scout!</h1>
                 <div class="btn-top-container">
                     <div class="btn btn-signup btn-top">
@@ -39,11 +39,11 @@ debugLogStart();
                 </div>
             </section>
 
-            <p id="explanation">
-                ・草野球を始めたい。でもついていけるか心配…<br>
-                ・実力が同じくらいのチームと練習試合がしたい！<br>
-                そんなあなたのために、ピッタリのサービスをご用意しました！<br>　
-            </p>
+            <div id="explanation">
+                <p>・草野球を始めたい。<br class="large-ignore">でもついていけるか心配…</p>
+                <p>・実力が同じくらいのチームと<br class="large-ignore">練習試合がしたい！</p>
+                <p>そんなあなたのために、<br class="large-ignore">ピッタリのサービスをご用意しました！</p>
+            </div>
 
             <section id="point">
                 <h2 class="section-title">POINT!!</h2>
@@ -56,7 +56,10 @@ debugLogStart();
                                 <dt class="cp-accordion01__title js-cp-accordion01__title">チーム検索はレベル毎に行うことができます！</dt>
                                 <!-- コンテンツ -->
                                 <dd class="cp-accordion01__content">
-                                    <p class="cp-text">・LEVEL1　未経験〜小学野球経験者中心<br>・LEVEL2　中学野球経験者中心<br>・LEVEL3　高校野球経験者中心<br>・LEVEL4　大学、社会人野球経験者中心<br>
+                                    <p class="cp-text">・LEVEL1　<br class="large-ignore">未経験〜小学野球経験者中心<br>
+                                                        ・LEVEL2　<br class="large-ignore">中学野球経験者中心<br>
+                                                        ・LEVEL3　<br class="large-ignore">高校野球経験者中心<br>
+                                                        ・LEVEL4　<br class="large-ignore">大学、社会人野球経験者中心<br>
                                                         もちろん、活動地域、活動日などからも選ぶことができます！</p>
                                 </dd><!-- /コンテンツ -->
                             </dl><!-- /アイテム -->
