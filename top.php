@@ -30,10 +30,10 @@ debugLogStart();
                 <h3>草野球を楽しむ、全ての人へ。</h3>
                 <h1>Scout!</h1>
                 <div class="btn-top-container">
-                    <div id="btn-top" class="btn btn-signup">
+                    <div class="btn btn-signup btn-top">
                         <a href="signup.php">ユーザー登録</a>
                     </div>
-                    <div id="btn-top" class="btn btn-login">
+                    <div class="btn btn-login btn-top">
                         <a href="login.php">ログイン</a>
                     </div>
                 </div>
@@ -76,10 +76,10 @@ debugLogStart();
             <h3>さあ、はじめよう。</h3>
             <h1>Scout!</h1>
             <div class="btn-top-container">
-                <div id="btn-top" class="btn btn-signup">
+                <div class="btn btn-top btn-signup">
                     <a href="signup.php">ユーザー登録</a>
                 </div>
-                <div id="btn-top" class="btn btn-login">
+                <div class="btn btn-top btn-login">
                     <a href="login.php">ログイン</a>
                 </div>
             </div>

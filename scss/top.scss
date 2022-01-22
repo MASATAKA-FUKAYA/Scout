@@ -1,16 +1,43 @@
+/*全体 --------------------------------------*/
+$breakpoints: (
+    'sm': 'screen and (max-width: 414px)',
+    'md': 'screen and (max-width: 820px)',
+    'lg': 'screen and (max-width: 1000px)',
+    'xl': 'screen and (max-width: 1200px)',
+) !default;
+@mixin mq($breakpoint: sm) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+}
+
 /*btn-top*/
 .btn-top-container{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 60%;
+    max-width: 520px;
+    min-width: 450px;
+    margin: 0 auto;
+    @include mq(sm){
+        flex-direction: column;
+        min-width: 210px;
+    }
 }
-#btn-top{
+.btn-top{
     width: 210px;
     font-size: 28px;
+    @include mq(sm){
+        font-size: 20px;
+        margin: 0 auto;
+    }
+    &:last-child{
+        @include mq(sm){
+            margin-top: 20px;
+        }
+    }
 }
-#btn-top:last-child {
-    margin-left: 100px;
-}
-
+    
 /*main*/
 #main{
     margin-bottom: 120px;
