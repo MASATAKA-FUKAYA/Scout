@@ -13,13 +13,8 @@ select {
   margin-bottom: 10px;
 }
 
-.result-wrapper {
-  width: 100%;
-}
-
 .result-wrapper a {
   color: black;
-  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

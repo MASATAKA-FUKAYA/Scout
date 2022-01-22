@@ -584,13 +584,20 @@ header .site-width {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #F5F5F5;
   border: 1px solid #707070;
-  padding: 20px;
 }
 
 .result-wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 50%;
+  padding: 20px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -610,11 +617,11 @@ header .site-width {
 }
 
 .result-text h4 {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .result-text p {
-  font-size: 15px;
+  font-size: 12px;
 }
 
 /*side-bar*/
